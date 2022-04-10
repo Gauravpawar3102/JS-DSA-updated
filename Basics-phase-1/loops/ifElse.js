@@ -118,19 +118,55 @@
 
 // ?Prime number
 
-let isprime = false;
+// let isprime = false;
 
-function primeNumber(num) {
-  for (let i = 2; i < num; i++) {
-    if (num % 2 == 0) {
-      // console.log(i + 'is not a prime number');
-      isprime = false;
-    } else {
-      isprime = true;
+// function primeNumber(num) {
+//   for (let i = 2; i < num; i++) {
+//     if (num % 2 == 0) {
+//       // console.log(i + 'is not a prime number');
+//       isprime = false;
+//     } else {
+//       isprime = true;
+//     }
+//   }
+//   if (isprime == true) {
+//     console.log(num + 'is prime');
+//   }
+// }
+// primeNumber(13);
+
+// ?Patterns 1
+// * * *
+// * * *
+// * * *
+
+// function patterns1(n) {
+//   let starStr = '';
+//   for (let i = 1; i <= n; i++) {
+//     for (let j = 1; j <= n; j++) {
+//       starStr += '* ';
+//     }
+//     starStr += '\n';
+//   }
+//   console.log(starStr);
+// }
+
+// patterns1(3);
+
+// ?Patterns 2
+// 1 1 1
+// 2 2 2
+// 3 3 3
+
+function patterns2(n) {
+  let starStr = '';
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= n; j++) {
+      starStr += `${i}`;
     }
+    starStr += '\n';
   }
-  if (isprime == true) {
-    console.log(num + 'is prime');
-  }
+  console.log(starStr);
 }
-primeNumber(13);
+
+patterns2(3);
