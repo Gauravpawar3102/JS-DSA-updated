@@ -104,14 +104,33 @@
 
 // ?print factorial of n numbers
 // !for factorial 0! is one
-function factorialOfN(num) {
-  if ((num = 0)) {
-    console.log('factorial of 0 is 1');
+// function factorialOfN(num) {
+//   if ((num = 0)) {
+//     console.log('factorial of 0 is 1');
+//   }
+//   for (let i = 1; i <= num; i++) {
+//     let fact = 1;
+//     console.log((fact *= i));
+//   }
+// }
+
+// factorialOfN(5);
+
+// ?Prime number
+
+let isprime = false;
+
+function primeNumber(num) {
+  for (let i = 2; i < num; i++) {
+    if (num % 2 == 0) {
+      // console.log(i + 'is not a prime number');
+      isprime = false;
+    } else {
+      isprime = true;
+    }
   }
-  for (let i = 1; i <= num; i++) {
-    let fact = 1;
-    console.log((fact *= i));
+  if (isprime == true) {
+    console.log(num + 'is prime');
   }
 }
-
-factorialOfN(5);
+primeNumber(13);
