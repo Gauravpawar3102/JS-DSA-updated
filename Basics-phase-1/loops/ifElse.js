@@ -268,17 +268,62 @@
 // patterns6(4);
 
 // ?Patterns 8
-// 1;
-// 22;
-// 333;
-// 4444;
+
+// 1
+// 2 3
+// 3 4 5
+// 4 5 6 7
+// function patterns6(n) {
+//   let string = '';
+//   for (let i = 1; i <= n; i++) {
+//     let count = i;
+//     for (let j = 1; j <= i; j++) {
+//       string += count++ + ' ';
+//       // string += i + j - 1 + ' ';
+//     }
+
+//     string += '\n';
+//   }
+//   console.log(string);
+// }
+
+// patterns6(4);
+
+// ?Patterns 9
+// 1
+// 21
+// 321
+// 4321
+
+// function patterns6(n) {
+//   let string = '';
+//   for (let i = 1; i <= n; i++) {
+//     let count = i;
+//     for (let j = 1; j <= i; j++) {
+//       string += count-- + ' ';
+//       // string += i + j - 1 + ' ';
+//     }
+
+//     string += '\n';
+//   }
+//   console.log(string);
+// }
+
+// patterns6(4);
+
+// ?Patterns 10
+// 1
+// 21
+// 321
+// 4321
 
 function patterns6(n) {
   let string = '';
-  let count = 1;
   for (let i = 1; i <= n; i++) {
+    let count = i;
     for (let j = 1; j <= i; j++) {
-      string += count++;
+      string += count-- + ' ';
+      // string += i + j - 1 + ' ';
     }
 
     string += '\n';
