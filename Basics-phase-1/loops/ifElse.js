@@ -158,15 +158,132 @@
 // 2 2 2
 // 3 3 3
 
-function patterns2(n) {
-  let starStr = '';
+// function patterns2(n) {
+//   let starStr = '';
+//   for (let i = 1; i <= n; i++) {
+//     for (let j = 1; j <= n; j++) {
+//       starStr += `${i}`;
+//     }
+//     starStr += '\n';
+//   }
+//   console.log(starStr);
+// }
+
+// patterns2(3);
+
+// ?Patterns 3
+// 1 2 3 4
+// 1 2 3 4
+// 1 2 3 4
+// 1 2 3 4
+
+// function patterns3(n) {
+//   let starStr = '';
+//   for (let i = 1; i <= n; i++) {
+//     for (let j = 1; j <= n; j++) {
+//       starStr += `${j}`;
+//     }
+//     starStr += '\n';
+//   }
+//   console.log(starStr);
+// }
+
+// patterns3(4);
+
+// ?Patterns 4
+// 3 2 1
+// 3 2 1
+// 3 2 1
+
+// function patterns3(n) {
+//   let starStr = '';
+//   for (let i = 1; i <= n; i++) {
+//     for (let j = 1; j <= n; j++) {
+//       starStr += `${n-j+1}`;
+//     }
+//     starStr += '\n';
+//   }
+//   console.log(starStr);
+// }
+
+// patterns3(4);
+
+// ?Patterns 5
+// 1 2 3
+// 4 5 6
+// 7 8 9
+
+// function patterns5(n) {
+//   let starStr = '';
+//   let count = 0;
+//   for (let i = 1; i <= n; i++) {
+//     for (let j = 1; j <= n; j++) {
+//       starStr += `${(count = count + 1)}`;
+//     }
+//     starStr += '\n';
+//   }
+//   console.log(starStr);
+// }
+
+// patterns5(3);
+
+// ?Patterns 6
+// *
+// * *
+// * * *
+// * * * *
+
+// function patterns6(n) {
+//   let string = '';
+//   for (let i = 1; i <= n; i++) {
+//     for (let j = 1; j <= i; j++) {
+//       string += '* ';
+//     }
+
+//     string += '\n';
+//   }
+//   console.log(string);
+// }
+
+// patterns6(4);
+
+// ?Patterns 7
+// 1;
+// 22;
+// 333;
+// 4444;
+
+// function patterns6(n) {
+//   let string = '';
+//   for (let i = 1; i <= n; i++) {
+//     for (let j = 1; j <= i; j++) {
+//       string += i;
+//     }
+
+//     string += '\n';
+//   }
+//   console.log(string);
+// }
+
+// patterns6(4);
+
+// ?Patterns 8
+// 1;
+// 22;
+// 333;
+// 4444;
+
+function patterns6(n) {
+  let string = '';
+  let count = 1;
   for (let i = 1; i <= n; i++) {
-    for (let j = 1; j <= n; j++) {
-      starStr += `${i}`;
+    for (let j = 1; j <= i; j++) {
+      string += count++;
     }
-    starStr += '\n';
+
+    string += '\n';
   }
-  console.log(starStr);
+  console.log(string);
 }
 
-patterns2(3);
+patterns6(4);
