@@ -317,13 +317,137 @@
 // 321
 // 4321
 
+// function patterns6(n) {
+//   let string = '';
+//   for (let i = 1; i <= n; i++) {
+//     let count = i;
+//     for (let j = 1; j <= i; j++) {
+//       string += count-- + ' ';
+//       // string += i + j - 1 + ' ';
+//     }
+
+//     string += '\n';
+//   }
+//   console.log(string);
+// }
+
+// patterns6(40);
+
+// ?Patterns 11
+//     *
+//   * *
+// * * *
+
+// function patterns6(n) {
+//   let string = '';
+//   for (let i = 1; i <= n; i++) {
+//     for (let j = 1; j <= n - i; j++) {
+//       string += '  ';
+//       // string += i + j - 1 + ' ';
+//     }
+//     for (let k = 1; k <= i; k++) {
+//       string += '* ';
+//     }
+
+//     string += '\n';
+//   }
+//   console.log(string);
+// }
+
+// patterns6(3);
+
+// ?Patterns 12
+// * * *
+// * *
+// *
+
+// function patterns6(n) {
+//   let string = '';
+//   for (let i = 1; i <= n; i++) {
+//     for (let j = 1; j <= n - i + 1; j++) {
+//       string += '* ';
+//       // string += i + j - 1 + ' ';
+//     }
+//     for (let k = 1; k <= 1; k++) {
+//       string += '  ';
+//     }
+
+//     string += '\n';
+//   }
+//   console.log(string);
+// }
+
+// patterns6(3);
+
+// ?Patterns 13
+// * * *
+//   * *
+//     *
+
+// function patterns6(n) {
+//   let string = '';
+//   for (let i = 1; i <= n; i++) {
+//     for (let j = 1; j <= i - 1; j++) {
+//       string += '  ';
+//       // string += i + j - 1 + ' ';
+//     }
+//     for (let k = 1; k <= n - i + 1; k++) {
+//       string += '* ';
+//     }
+
+//     string += '\n';
+//   }
+//   console.log(string);
+// }
+
+// patterns6(3);
+
+// ?Patterns 13
+// 1 1 1 1
+//   2 2 2
+//     3 3
+//       4
+
+// function patterns6(n) {
+//   let string = '';
+//   for (let i = 1; i <= n; i++) {
+//     for (let j = 1; j <= i - 1; j++) {
+//       string += '  ';
+//       // string += i + j - 1 + ' ';
+//     }
+//     for (let k = 1; k <= n - i + 1; k++) {
+//       string += i + ' ';
+//     }
+
+//     string += '\n';
+//   }
+//   console.log(string);
+// }
+
+// patterns6(4);
+
+// ?Patterns 14
+// 1 1 1 1
+//   2 2 2
+//     3 3
+//       4
+
 function patterns6(n) {
   let string = '';
   for (let i = 1; i <= n; i++) {
-    let count = i;
-    for (let j = 1; j <= i; j++) {
-      string += count-- + ' ';
+    for (let j = 1; j <= n - i; j++) {
+      string += '  ';
       // string += i + j - 1 + ' ';
+    }
+    for (let k = 1; k <= i; k++) {
+      string += k + ' ';
+    }
+
+    let start = i - 1;
+    for (let l = 1; l <= start; l) {
+      /*  no increment l*/
+      string += start + ' ';
+      start = start - 1;
     }
 
     string += '\n';
