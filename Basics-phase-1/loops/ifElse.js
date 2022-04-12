@@ -432,27 +432,60 @@
 //     3 3
 //       4
 
+// function patterns6(n) {
+//   let string = '';
+//   for (let i = 1; i <= n; i++) {
+//     for (let j = 1; j <= n - i; j++) {
+//       string += '  ';
+//       // string += i + j - 1 + ' ';
+//     }
+//     for (let k = 1; k <= i; k++) {
+//       string += k + ' ';
+//     }
+
+//     let start = i - 1;
+//     for (let l = 1; l <= start; l) {
+//       /*  no increment l*/
+//       string += start + ' ';
+//       start = start - 1;
+//     }
+
+//     string += '\n';
+//   }
+//   console.log(string);
+// }
+
+// patterns6(4);
+
+// ?Patterns 15
+// 1 2 3 4 5 5 4 3 2 1
+// 1 2 3 4 * * 4 3 2 1
+// 1 2 3 * * * * 3 2 1
+// 1 2 * * * * * * 2 1
+// 1 * * * * * * * * 1
+
 function patterns6(n) {
   let string = '';
   for (let i = 1; i <= n; i++) {
-    for (let j = 1; j <= n - i; j++) {
-      string += '  ';
-      // string += i + j - 1 + ' ';
+    // triangle 1
+    for (let j = 1; j <= n - i + 1; j++) {
+      string += j + ' ';
     }
-    for (let k = 1; k <= i; k++) {
-      string += k + ' ';
+    // triangle 2 part-1
+    for (let k = 1; k <= i - 1; k++) {
+      string += '* ';
     }
-
-    let start = i - 1;
-    for (let l = 1; l <= start; l) {
-      /*  no increment l*/
-      string += start + ' ';
-      start = start - 1;
+    // triangle 2 part-2
+    for (let l = 1; l <= i - 1; l++) {
+      string += '* ';
     }
-
+    // triangle 3
+    for (let l = n; l >= i; l--) {
+      string += l - i + 1 + ' ';
+    }
     string += '\n';
   }
   console.log(string);
 }
 
-patterns6(4);
+patterns6(5);
