@@ -480,8 +480,8 @@ function patterns6(n) {
       string += '* ';
     }
     // triangle 3
-    for (let l = n; l >= i; l--) {
-      string += l - i + 1 + ' ';
+    for (let m = n; m >= i; m--) {
+      string += m - i + 1 + ' ';
     }
     string += '\n';
   }
