@@ -120,7 +120,7 @@
 // console.log(total);
 
 // ?Includes//returns true or false if the array includes the given item
-const items = [1, 2, 3, 4, 5];
-const includesTwo = items.includes(7);
+// const items = [1, 2, 3, 4, 5];
+// const includesTwo = items.includes(7);
 
-console.log(includesTwo);
+// console.log(includesTwo);
