@@ -3,7 +3,7 @@
 // ex. reverseString('hello') === 'olleh'
 
 function reverseString(str) {
-  // *solution-1
+  // *solution-1 - with inbuilt methods
   //   const strArr = str.split('').reverse().join('');
   //   return strArr;
   // *solution-2-with decrementing forloop  without reverse() method
