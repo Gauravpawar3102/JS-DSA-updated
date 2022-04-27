@@ -4,6 +4,7 @@
 
 function reverseString(str) {
   // *solution-1 - with inbuilt methods
+  // *solution-1 - with inbuilt method
   //   const strArr = str.split('').reverse().join('');
   //   return strArr;
   // *solution-2-with decrementing forloop  without reverse() method
