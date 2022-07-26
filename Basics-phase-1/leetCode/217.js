@@ -1,24 +1,27 @@
 function containsDuplicate(inputArray) {
-  const input = inputArray;
-  let memory = {};
-  for (let i = 0; i < input.length; i++) {
-    // console.log(input[inputItem]);
-    // console.log(inputItem);
+  // !Brute Force
+  // const input = inputArray;
+  // let memory = {};
+  // for (let i = 0; i < input.length; i++) {
 
-    // for (j = 0; j < input.length; j++) {
-    //   console.log('----' + input[inputItem] + '--' + inputItem);
-    // }
-    // inputItem++;
-
-    if (memory[input[i]] === undefined) {
-      memory[input[i]] = '🐱‍🏍';
-      console.log(false);
+  //   if (memory[input[i]] === undefined) {
+  //     memory[input[i]] = '🐱‍🏍';
+  //   } else {
+  //     memory[input[i]] = "i'm back";
+  //     return true;
+  //   }
+  // }
+  // return false;
+  // !optimal
+  let numbers = new Set();
+  for (let num of inputArray) {
+    if (!numbers.has(num)) {
+      numbers.add(num);
     } else {
-      memory[input[i]] = "i'm back";
-      console.log(true);
       return true;
     }
   }
+
   return false;
 }
 
