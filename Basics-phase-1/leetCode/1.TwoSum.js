@@ -1,16 +1,19 @@
 function twoSum(nums, target) {
-  let output = new Set();
+  // let output = new Set();
   for (let i = 0; i < nums.length; i++) {
-    // console.log('---' + nums[i]);
-
+    const numberToFind = target - nums[i];
+    // console.log(numberToFind);
     for (let j = i + 1; j < nums.length; j++) {
-      if (nums[i] + nums[j] === target) {
+      if (numberToFind === nums[j]) {
         // console.log(
         //   'log ' + nums.indexOf(nums[i]) + ' ' + nums.indexOf(nums[j])
         // );
         // output.add([nums.indexOf(nums[i]), nums.indexOf(nums[j])]);
 
-        console.log([nums.indexOf(nums[i]), nums.indexOf(nums[j])]);
+        // console.log([nums.indexOf(nums[i]), nums.indexOf(nums[j])]);
+
+        console.log([i, j]);
+
         // console.log([nums[i], nums[j]]);
         // console.log([nums.indexOf(nums[i]), nums.indexOf(nums[j])]);
         // console.log(output);
@@ -20,4 +23,4 @@ function twoSum(nums, target) {
   }
 }
 
-twoSum([3, 2, 4], 6);
+twoSum([3, 3], 6);
