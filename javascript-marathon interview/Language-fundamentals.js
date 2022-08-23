@@ -50,3 +50,19 @@
 // let arr1 = [1543, 5422, 3333, 423];
 
 // console.log(Math.max(...arr1));
+
+// ! lec 5 - When we get infinity as output
+
+// console.log(Number.POSITIVE_INFINITY);
+// console.log(Number.NEGATIVE_INFINITY);
+
+// console.log(9e4); //9 *1 0000= 90,000 it will add 4 zeros after 9
+// console.log(9e400); //its greater than 64 bit
+// console.log(-9e400);
+// console.log(Number.MAX_VALUE);
+// console.log(1 / 0);
+// ! lec 6 - When we get NaN
+// let a = 'Hi';
+// let b = 5;
+
+// console.log(a * b);
