@@ -67,9 +67,9 @@
 
 // console.log(a * b);
 // ! lec 7 - Arrow Function
-const sumof = (a, b) => a + b; //no return required if only one statement
-sumof(2, 3);
-const sum = (a) => {
-  console.log(a);
-};
-sum(5);
+// const sumof = (a, b) => a + b; //no return required if only one statement
+// sumof(2, 3);
+// const sum = (a) => {
+//   console.log(a);
+// };
+// sum(5);
