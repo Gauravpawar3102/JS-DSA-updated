@@ -73,3 +73,14 @@
 //   console.log(a);
 // };
 // sum(5);
+// ! lec 8 - Closure
+// ! lec 9 - Currying
+
+const sum = function (a) {
+  return function (b) {
+    return a + b;
+  };
+};
+
+const ans = sum(5)(6);
+console.log(ans);
