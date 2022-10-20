@@ -1,19 +1,13 @@
 function groupAnagrams(strs) {
-  let sortedArray = [];
-  let resultArray = [];
-  for (let i = 0; i < strs.length; i++) {
-    sortedArray.push(strs[i].split('').sort().join(''));
-  }
-  sortedArray.sort();
-  for (let j = 0; j < sortedArray.length; j++) {
-    if (sortedArray[j] === sortedArray[j + 1]) {
-      resultArray.push([sortedArray[j], sortedArray[j + 1]]);
+  let objects = {};
+  for (let str of strs) {
+    let sortedKey = str.split('').sort().join('');
+    if (!objects[sortedKey]) {
+      objects[sortedKey] = [str];
     } else {
-      resultArray.push([sortedArray[j]]);
+      objects[sortedKey].push(str);
     }
   }
-
-  console.log(sortedArray);
-  console.log(resultArray);
+  return Object.values(objects);
 }
 groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']);
