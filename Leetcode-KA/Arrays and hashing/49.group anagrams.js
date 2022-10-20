@@ -1,13 +1,15 @@
 function groupAnagrams(strs) {
   let objects = {};
+
   for (let str of strs) {
-    let sortedKey = str.split('').sort().join('');
-    if (!objects[sortedKey]) {
-      objects[sortedKey] = [str];
+    let sorted = str.split('').sort().join('');
+    //aet
+    if (objects[sorted] === undefined) {
+      objects[sorted] = [str];
     } else {
-      objects[sortedKey].push(str);
+      objects[sorted].push(str);
     }
   }
-  return Object.values(objects);
+  console.log(Object.values(objects));
 }
 groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']);
